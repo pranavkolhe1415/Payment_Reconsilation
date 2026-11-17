@@ -1,0 +1,18 @@
+{
+  "reporting_period": "2026-01",
+  "currency": "INR",
+  "platform_rows": 100,
+  "bank_rows": 102,
+  "planted_cases": 4,
+  "planted_gap_types": [
+    "next-month settlement",
+    "aggregate rounding difference",
+    "duplicate bank entry",
+    "orphan refund"
+  ],
+  "rounding_test": {
+    "per_record_difference_inr": "0.004",
+    "number_of_records": 3,
+    "aggregate_difference_inr": "0.012"
+  }
+}

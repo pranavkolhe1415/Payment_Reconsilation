@@ -1,0 +1,5 @@
+case_id,gap_type,platform_transaction_id,bank_settlement_id,expected_behavior
+GAP_01,NEXT_MONTH_SETTLEMENT,TXN1001,SET2001,"Match by reference; classify as settled after January period, not permanently missing."
+GAP_02,AGGREGATE_ROUNDING_DIFFERENCE,TXN1002|TXN1003|TXN1004,SET2002|SET2003|SET2004,Each absolute difference is INR 0.004; combined absolute difference is INR 0.012. Preserve precision before aggregation.
+GAP_03,DUPLICATE_BANK_ENTRY,TXN1010,SET2010|SET_DUP_001,"Detect the second bank row as duplicate using business fields, not settlement_id."
+GAP_04,ORPHAN_REFUND,,SET_REFUND_001,Flag refund because original_transaction_reference TXN9999 does not exist in platform data.
